@@ -12,8 +12,8 @@ on:
     branches: ["main"]
 
 jobs:
-  analyze-and-test:
-    name: Analyze & test
+  pr-id:
+    name: Get PR id
     runs-on: macos-14
     timeout-minutes: 10
     env:
@@ -23,9 +23,8 @@ jobs:
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
 
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
+      - id: pull-request-id-step
+        run: echo "id=${{ steps.PR.outputs.number }}" >> "$GITHUB_OUTPUT"
 
       - name: Connect private iap package
         uses: webfactory/ssh-agent@v0.8.0
