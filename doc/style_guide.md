@@ -1,4 +1,4 @@
-# M3 Lightmeter repo style guide
+M3 Lightmeter repo style guide
 
 This repo uses [Effective Dart Style](https://dart.dev/guides/language/effective-dart/style) and [Style guide for Flutter repo](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo#formatting) with some alterations.
 
@@ -113,28 +113,4 @@ components/
 │   ├── provider_list_tile_haptics.dart
 │   └── widget_list_tile_haptics.dart
 └── theme_type/
-    └── widget_list_tile_theme_type.dart
-```
-
-## Formatting
-
-### Omit trailing comma after single parameter
-
-```dart
-/// BAD
-const SizedBox(
-  width: 16.0,
-)
-
-/// ALSO BAD
-const SizedBox(width: 16.0, height: 16.0)
-
-/// GOOD
-const SizedBox(width: 16.0)
-
-/// ALSO GOOD
-const SizedBox(
-  width: 16.0,
-  height: 16.0,
-)
-```
+    └── widget_list
